@@ -1,3 +1,8 @@
+# Overview
+
+The following is a template for pull requests.  Replace this text with a description of the pull request.
+
+## Checklist
 * **Please check if the PR fulfills these requirements**
 - [ ] The commit message follows our guidelines
 - [ ] Tests for the changes have been added (for bug fixes / features)
