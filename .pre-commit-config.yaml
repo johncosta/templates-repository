@@ -21,3 +21,10 @@ repos:
         description: Checks that all json files are valid.
       - id: check-toml
         description: Checks that all toml files are valid.
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.23
+    hooks:
+      # terraform
+      - id: terraform-fmt
+      - id: terraform-validate
+      - id: tflint
