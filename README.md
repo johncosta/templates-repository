@@ -10,3 +10,4 @@ The following repository is a template for new repositories I create.
 - [Super Linter](https://github.com/marketplace/actions/super-linter)
 - [Release](https://github.com/rymndhng/release-on-push-action)
 - [AutoComment](https://github.com/wow-actions/auto-comment)
+- [Stale PRs](https://github.com/actions/stale)
