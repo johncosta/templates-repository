@@ -1,9 +1,5 @@
 ---
-#################################
-#################################
-## Super Linter GitHub Actions ##
-#################################
-#################################
+
 name: lint-code-base
 
 #############################
@@ -16,6 +12,9 @@ on:
   pull_request:
     branches:
       - main
+
+permissions:
+  contents: read
 
 ###############
 # Set the Job #
@@ -48,13 +47,11 @@ jobs:
           # Full git history is needed to get a proper
           # list of changed files within `super-linter`
           fetch-depth: 0
-
+      - uses: actions/setup-python@v3
+      - uses: pre-commit/action@v3.0.1
       ################################
       # Run Linter against code base #
       ################################
       - name: lint-code-base
-        uses: super-linter/super-linter@v5
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          make lint
